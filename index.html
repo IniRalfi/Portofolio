@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md bg-primary bg-danger navbar-dark">
+<body id="home">
+    <nav class="navbar navbar-expand-md bg-primary bg-danger navbar-dark fixed-top shadow">
         <div class="container rounded p-2 pe-4 ps-4">
             <a class="navbar-brand" href="#">Rafli Pratama</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -20,10 +20,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">About</a>
-                    <a class="nav-link" href="#">Galery</a>
-                    <a class="nav-link" href="#">contact</a>
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#galery">Galery</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -46,8 +46,8 @@
         </svg>
     </section>
 
-    <section id="about" class="bg-danger ">
-        <div class="container p-3">
+    <section id="about" class="bg-danger pt-5">
+        <div class="container pt-5">
             <div class="row text-center justify-content-center text-white">
                 <h2>About</h2>
                 <div class="col-md-4 p-3 me-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim
@@ -77,7 +77,7 @@
     </section>
 
     <section id="galery" class="bg-danger pt-5">
-        <div class="container text-white text-center p-3 ">
+        <div class="container text-white text-center pt-5 ">
             <h2 class="pb-3">Galery</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center ">
                 <div class="col">
@@ -114,8 +114,8 @@
         </div>
     </section>
 
-    <section class="bg-danger pt-5">
-        <div class="container ">
+    <section id="contact" class="bg-danger pt-5">
+        <div class="container pt-5">
             <div class="row  justify-content-center text-white">
                 <h2 class="text-center pb-3">Contact Us</h2>
                 <div class="col-md-6">
@@ -154,6 +154,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <script>
+        const a = document.querySelectorAll('a.nav-link');
+        for (const nav of a) {
+            nav.addEventListener('click', function () {
+                nav.classList.toggle('active')
+                nav.classList.toggle('text-center')
+            })
+        }
     </script>
 </body>
 
