@@ -6,3 +6,8 @@ section {
 .jumbotron h2 {
     margin-top: -100px;
 }
+
+a.nav-link:hover,
+a.nav-link:active {
+    color: white;
+}
